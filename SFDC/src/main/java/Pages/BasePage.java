@@ -26,6 +26,7 @@ public abstract class BasePage {
    //Click Method
    public void click (By elementLocation) {
        driver.findElement(elementLocation).click();
+       
        System.out.println("Element is present");
    }
 
@@ -59,9 +60,17 @@ public abstract class BasePage {
    		
    	}
    	
+   	public void selectelement(By elementLocation, String value) {
+   		WebElement mySelectElement = driver.findElement(elementLocation);
+   		Select selectInstance = new  Select(mySelectElement);
+   		selectInstance.selectByVisibleText(value);
+   
+   	}
    	
-   	
-   	public void selectradiobutton(By elementLocation) {
+ 
+
+
+	public void selectradiobutton(By elementLocation) {
    		driver.findElement(elementLocation).click();
 
    	}
@@ -110,7 +119,7 @@ public abstract class BasePage {
 	{
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		if (to.equals("end"))
-			executor.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
+			executor.executeScript("window.scrollBy(0,450)", "");
 		else if (to.equals("top"))
            executor.executeScript("window.scrollTo(Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight),0);");
 		else

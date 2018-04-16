@@ -18,7 +18,7 @@ public class LoginPage extends BasePage{
     
     public static final String usernavbutton = "userNavLabel";
     public static final String menubutton = "Setup";
-    public static final String setupsearch = "setupSearch";
+    public static final String setupsearch = "phSearchInput";
     public static final String setupsearchbutton = "setupSearchButton";
     public static final String clicksearchxpath = "html/body/div[1]/div[2]/div[2]/div/div/div[3]/div/div[2]/table/tbody/tr[1]/td[2]/a";
     public static final String loginbutton = "login";

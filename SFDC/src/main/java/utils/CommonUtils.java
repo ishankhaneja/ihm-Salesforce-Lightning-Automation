@@ -1,8 +1,10 @@
 package utils;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.HashMap;
 import java.util.Random;
+//import org.json.JSONObject;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -55,6 +57,30 @@ public class CommonUtils {
         return result;
 
     }
+    
+//    public static JSONObject readFile(String filename) {
+//        String result = "";
+//        
+//        try {
+//              BufferedReader br = new BufferedReader(new FileReader(filename));
+//              StringBuilder sb = new StringBuilder();
+//              String line = br.readLine();
+//              while (line != null) {
+//                  sb.append(line);
+//                  line = br.readLine();
+//              }
+//              result = sb.toString();
+//              br.close();
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//        }
+//               
+//        JSONObject json = new JSONObject(readFile(result));
+//        return json;
+//      }
+//    
+    
+    
     
 //    
 //    public JSONObject getFile(String fileName) {

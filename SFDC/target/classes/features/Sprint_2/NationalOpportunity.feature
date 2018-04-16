@@ -4,7 +4,7 @@ Feature: Verify child opportunity button
 
 
 Background: User navigates to Company home page
-Given the user opens the chrome page
+#Given the user opens the chrome page
 
 Scenario: New opportunity page
 Then the user navigate to the salesforce page

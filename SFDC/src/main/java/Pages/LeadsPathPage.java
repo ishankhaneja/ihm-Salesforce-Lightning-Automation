@@ -16,28 +16,27 @@ public class LeadsPathPage extends BasePage{
         super(driver);
       
     }
-    
-    
+      
         public static final String usename_Id = "email";
         public static final String aeleadstab =   "//*[@title='Leads']";
         
         public static final String newleadsbutton = "//*[@id=\'brandBand_1\']/div/div/div[2]/div/div/div[1]/div[1]/div[2]/ul/li[1]";
-        public static final String leadslastname = "//*[@class= 'compoundBLRadius compoundBRRadius form-element__row input']";
-        public static final String leadscompany = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div/div[3]/div[1]/div/div/div/input";
-        public static final String street = "//textarea[@class='compoundTLRadius compoundTRRadius compoundBorderBottom textarea']";
-        public static final String city = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[2]/div/div/div/div[1]/div/div/fieldset/div/div[3]/div[1]/div/input";
-        public static final String zipcode = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[2]/div/div/div/div[1]/div/div/fieldset/div/div[4]/div[1]/div/input";
-        public static final String stateselect = "//*[@class='compoundBorderBottom uiMenu']/div[1]/div[1]/div[1]/a";
-        public static final String stateselect1 = "//*[@class='compoundBorderBottom uiMenu']";
+        public static final String leadslastname = "//*[@class= 'lastName compoundBLRadius compoundBRRadius form-element__row input']";
+        public static final String leadscompany = "html/body/div[5]/div[2]/div[4]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div/div[1]/div[1]/div/div/div/input";
+        public static final String street = "//textarea[@class='street compoundBorderBottom textarea']";
+        public static final String city = "//*[@class='city compoundBorderBottom compoundBorderRight input']";
+        public static final String zipcode = "//*[@class='postalCode compoundBLRadius compoundBRRadius input']";
+        public static final String stateselect = "//*[@class='state compoundBorderBottom uiMenu']/div[1]/div[1]/div[1]/a";
+        public static final String stateselect1 = "//*[@class='state compoundBorderBottom uiMenu']";
         public static final String statename = "Texas"; 
-        public static final String leadsource = "//*[@aria-label ='Lead Source']";
+        public static final String leadsource = "html/body/div[5]/div[2]/div[4]/div[2]/div/div[2]/div/div[4]/div/div[4]/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div/a";
         
         public static final String leadsourcename = "Internet";
-        public static final String leadsourcetype = "//*[@aria-label ='Lead Source Type']";
+        public static final String leadsourcetype = "html/body/div[5]/div[2]/div[4]/div[2]/div/div[2]/div/div[4]/div/div[4]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div/div/a";
         public static final String leadsourcetypename = "Advertise with Us Form";
-        public static final String industry = "//*[@aria-label ='Industry']";
+        public static final String industry = "html/body/div[5]/div[2]/div[4]/div[2]/div/div[2]/div/div[4]/div/div[4]/div/div/div[4]/div[1]/div/div/div/div/div[1]/div/div/a";
         public static final String industryname = "Miscellaneous";
-        public static final String subindustry = "//*[@aria-label ='Sub Industry']";
+        public static final String subindustry = "html/body/div[5]/div[2]/div[4]/div[2]/div/div[2]/div/div[4]/div/div[4]/div/div/div[5]/div[1]/div/div/div/div/div[1]/div/div/a";
         public static final String subindustryname = "Promotion";
         public static final String save_button = "//*[@class='slds-button slds-button--neutral uiButton--default uiButton--brand uiButton forceActionButton']";
         public static final String convert_button = "//*[@title='Convert']";

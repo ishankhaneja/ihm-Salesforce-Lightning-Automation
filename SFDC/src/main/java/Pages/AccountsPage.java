@@ -1,9 +1,6 @@
 package Pages;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -39,18 +36,23 @@ public class AccountsPage extends BasePage  {
    public static final String nextbutton = "//*[@class ='slds-button slds-button--neutral uiButton--default uiButton--brand uiButton']";
    public static final String accountname = "pg:frm:txtAccountName";
    public static final String edit_button = "//*[@title='Edit']";
+   
+   //New account values
    public static final String agency_button = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div/div[1]/fieldset/div[2]/div[3]/label/div[1]/span";
    public static final String account_name = " //*[@class ='input uiInput uiInputText uiInput--default uiInput--input']";
    public static final String city = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[3]/div/div/div/div[1]/div/div/fieldset/div/div[4]/div[1]/div/input"; 
-   public static final String zipcode = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[3]/div/div/div/div[1]/div/div/fieldset/div/div[5]/div/div/input";
-   public static final String industry = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div/div[6]/div[1]/div/div/div/div/div[1]/div/div/a";
+   public static final String zipcode = "//*[@class='postalCode compoundBLRadius compoundBRRadius input']";
+   public static final String industry = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div/div[6]/div[1]/div/div/div/div/div/div/div/a";
    public static final String industryname = "Education";
-   public static final String subindustry = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div/div[7]/div[1]/div/div/div/div/div/div/div/a";
+   public static final String subindustry = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div/div[7]/div[1]/div/div/div/div/div[1]/div/div/a";
    public static final String subindustryname = "Edu/College/School";
    public static final String street = "//textarea[@class='street compoundBorderBottom textarea']";
    public static final String stateselect = "html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[3]/div/div/div/div[1]/div/div/fieldset/div/div[4]/div[2]/div/div/div[1]/div/div/a";
    public static final String statename = "Texas";
    public static final String save_button = "//*[@title='Save']";
+   
+   
+//verify address   
    public static final String verify_address = "//*[starts-with(@href, '/apex/StrikeForce1__USAddressVerification?')]";
    public static final String accept_changes = "j_id0:j_id1:j_id28:j_id29:j_id31";
    public static final String show_more = "//*[@class='slds-grid slds-grid--vertical-align-center slds-grid--align-center sldsButtonHeightFix']";
@@ -165,6 +167,7 @@ public void  agencyname() {
        }
        
        public void zipcode(String zipcodenum) {
+//    	   click(By.xpath(zipcode));
        	writeText(By.xpath(zipcode),zipcodenum);
        }
        

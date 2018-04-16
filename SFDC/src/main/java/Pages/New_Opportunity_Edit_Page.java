@@ -21,6 +21,13 @@ public class New_Opportunity_Edit_Page extends BasePage {
 	public static final String sub_industry = "html/body/div[5]/div[2]/div[4]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div/div[14]/div[1]/div/div/div/div/div[1]/div/div/a";
 	public static final String subindustryname = "Edu/College/School";
 	public static final String save_button = "//*[@title='Save']";
+	
+	//Mp opportunity fields
+	
+	public static final String opportunity_name = "html/body/div[5]/div[2]/div[5]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div/div[3]/div[1]/div/div/div/input";
+	public static final String type = "html/body/div[5]/div[2]/div[5]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div/div[4]/div[1]/div/div/div/div/div[1]/div/div/a";
+	
+	
 //  @FindBy(how=How.XPATH, using="html/body/div[5]/div[2]/div[3]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div/div[1]/div[1]/div/div/div/div/div/div[1]/div/input")
 //  public static WebElement account_name;
   

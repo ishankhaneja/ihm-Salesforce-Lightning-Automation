@@ -55,39 +55,21 @@ public class homestepDefination extends AbstractPageStepDefination {
    
     
     
-    String baseURL = "https://ihm--lightngqa.lightning.force.com/";
+//    String baseURL = "https://ihm--lightngqa.lightning.force.com/";
 	
 //    public void AccountsPageInfo () throws Exception{
 //    }
     
     
     CommonUtils utils = new CommonUtils();
-   
- 
+
     JSONObject testData = utils.getDataFile("LeadPage.json");
     JSONObject testData2 = utils.getDataFile("Setup_Page_Data.json");
     JSONObject testData3 = utils.getDataFile("OpportunityPage.json");
     
     
-    @Given("^the user opens the chrome page$")
-    public void setup () throws Exception{   	
-    	 //*************PAGE INSTANTIATIONS*************
-    	System.setProperty("webdriver.chrome.driver", "C:\\Users\\1114813\\Downloads\\chromedrive\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
-        //Create a wait. All test and page classes use this wait.
-        wait = new WebDriverWait(driver,15);
-        //Maximize Window
-        driver.manage().window().maximize();
-    }
  
-    @Then("^the user navigate to the salesforce page$")
-    public void salesforceurl() {	
-    	login = new LoginPage(driver);
-    	driver.get(baseURL); 
-    	System.out.println(baseURL);
-    	
-    }
+ 
     
     @Given("^the user login in as '(.*)'$")
     public void salesforceuser(String profile) {
@@ -158,65 +140,7 @@ public class homestepDefination extends AbstractPageStepDefination {
     }
    
     
-    @Then("^the user create a new lead account")
-    public void createleadaccount() {
-        lead = new LeadsPathPage(driver);
-        lead.aeleadstab();
-        lead.newleadsbutton();
-        lead.lastname(testData.get("Lastname").toString());
-        lead.company(testData.get("Company").toString());
-        lead.street(testData.get("Street").toString());
-        lead.city(testData.get("City").toString());
-        lead.zipcode(testData.get("Zipcode").toString());
-        lead.stateselect();
-        lead.statename();
-        lead.selectleadsource();
-        lead.leadsourcename1();
-        lead.selectleadsourcetype();
-        lead.leadsourcetype1();
-        lead.selectindustrytype();
-        lead.selectsubindustrytype();
-        lead.selectsubindustry();
-        lead.clicksavebutton();
 
-    }
-    
-    
-    @Given("^the user converts the lead$")
-	 public void the_user_converts_the_lead() {
-    	lead = new LeadsPathPage(driver);
-		  lead.convertbutton();
-	 }
-    
-    @Given("^the user convert the lead to account$")
-    public void convertlead() {
-    	lead = new LeadsPathPage(driver);
-    	lead.convertleadbutton(); 	
-    }
-    
-    @And("^the user create new task$")
-    public void createnewtask() {
-    	leadtask = new Leads_add_task_page(driver);
-    	leadtask.createnewtask("Testdata", "4/2/2018");	
-    	leadtask.filltaskdetails("Completed", "Email", "Low");
-    }
-    
-    
-    
-//    @And("^the user clicks the (.*)$")
-//    public void clicks(String button) {
-//    		 
-//    System.out.println("*****************" + button);
-//    click(By.xpath(button));
-//    
-//    }
-    
-    
-    @And("^the user clicks the leadaccount$")
-    public void clickleadaccount() {
-    	lead = new LeadsPathPage(driver);
-    	lead.leadaccount();
-    }
     
     @Given("^the user clicks the related tab$")
     public void clickrelatedtab() {
@@ -393,16 +317,7 @@ public class homestepDefination extends AbstractPageStepDefination {
     	 newopportunitypage.nextbutton();
      }
      
-     @And("^the user create a new opportunity$")
-     public void createopportunity() {
-    	 newopportunityeditpage = new New_Opportunity_Edit_Page(driver);
-    	 newopportunityeditpage.createopportunity(testData3.get("Opportunity_desc").toString());
-    	 newopportunityeditpage.entersubindustry();
-    	 newopportunityeditpage.enterstage(testData3.get("Stage").toString());
-    	 newopportunityeditpage.enterdate(testData3.get("CloseDate").toString());
-    	 
-    	 
-     }
+   
 //	    public static void elementvisible(By elementLocation) {
 //
 //	    	boolean searchIconPresence = driver.findElement(elementLocation).isDisplayed();
